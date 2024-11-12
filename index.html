@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalistische Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
+    <link rel="stylesheet" href="mobil.css" media="(max-width: 768px)" />
+  </head>
+
+  <body>
+    <div class="hover-area"></div>
+
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">about</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="hero-content">
+          <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 1440 800" style="enable-background:new 0 0 1440 800;" xml:space="preserve">
+              <path class="cls-1" d="M868.4,248.2c-23.5-18-54.8-24.1-83.3-16c-27.5,7.8-50,28.4-60.8,54.7c-4.4,10.6-6.7,22-7,33.5h-1.9c-39.4,0-78.7,0-118.1,0
+              c-43.4,0-86.8,0-130.2-0.1c-43.5,0-87,0-130.6,0c-40.9,0-81.7,0-122.6,0c-34.3,0-68.6,0-102.9,0c-24.8,0-49.7,0-74.5,0
+              c-11.7,0-23.4-0.2-35.1,0c-0.5,0-1,0-1.5,0c-3.8,0-3.8,6,0,6c8.1,0,16.2,0,24.3,0c21.8,0,43.6,0,65.5,0c32.5,0,65,0,97.5,0
+              c39.4,0,78.7,0,118.1,0c43.4,0,86.8,0,130.2,0c43.5,0,87,0,130.6,0c40.9,0,81.7,0,122.6,0.1c9.5,0,19,0,28.6,0v190.9
+              c0,16.3-2.8,32.5-8.9,47.6c-6.4,15.8-16.9,30.9-31.2,40.2c-6.6,4.3-13.5,7.2-21.3,8.5c-5.3,0.9-11.5,0.7-17.2,0.8c-2,0-4,0-6.1,0
+              c-3.9,0-3.9,6,0,6c4.9,0,9.8,0,14.6-0.1c7.4,0,14.7-1.4,21.5-4.2c16.2-6.5,29-19.4,37.9-34.3c10.3-17.4,15.5-37.6,16.5-57.7
+              c0.2-5,0.2-9.9,0.2-14.9V357c1.9,5.3,4.3,10.4,7.2,15.3c16.8,28.4,47.5,45.7,80.4,45.9c3.8,0,3.9-6,0-6c-27.5-0.2-53.6-13-70-35.2
+              c-10.9-14.8-16.9-32.6-17.5-50.7c22.7,0,45.5,0,68.2,0c24.8,0,49.7,0,74.5,0c11.7,0,23.4,0.2,35.1,0c0.5,0,1,0,1.5,0
+              c1.6,0,3-1.4,3-3C905.4,294.1,891.8,266.1,868.4,248.2z M878.3,320.5c-21.8,0-43.7,0-65.5,0c-29.9,0-59.7,0-89.6,0
+              c0.2-7.1,1.3-14.2,3.2-21.1c7.1-25.8,25.9-47.7,50.7-58c25.7-10.7,55.7-8.3,79.5,6.1c25.7,15.5,41.7,43.3,42.9,73.1
+              C892.5,320.5,885.4,320.5,878.3,320.5z"/>
+          </svg>
+      </div>
+      <div class="scroll-indicator">&#x25BC;</div>
+  </section>
+
+    <main>
+      <section id="projects">
+        <h2></h2>
+        <div class="project-grid">
+          <div class="project-item" draggable="true">
+            <a href="project_ISU.html">
+              <img
+                class="fade-image fade-out"
+                src="img/Projekte_Preview/ISU_Janick_Entrop_Industriedesign.png"
+                alt="Projekt_ISU"
+              />
+              <div class="overlay">ISU</div>
+            </a>
+          </div>
+          <div class="project-item" draggable="true">
+            <a href="project_GREENHOUSE.html">
+              <img
+                class="fade-image"
+                src="img/Projekte_Preview/Greenhouse_Janick_Entrop_Industriedesign.png"
+                alt="Projekt_Greenhouse"
+              />
+              <div class="overlay">GREENHOUSE</div>
+            </a>
+          </div>
+          <div class="project-item" draggable="true">
+            <a href="Project_CAN_SIT.html">
+              <img
+                class="fade-image scale-large"
+                id="CAN_SIT-img"
+                src="img/Projekt_CAN_SIT/20240508_Readymade_Fresiteller_CAN_SIT_Janick_Entrop_Industriedesign.gif"
+                alt="Projekt_CAN_SIT"
+              />
+              <div class="overlay">CAN_SIT</div>
+            </a>
+          </div>
+          <div class="project-item" draggable="true">
+            <a href="Project_DESIGNZEUG.html">
+              <img
+                class="fade-image"
+                src="img/Projekte_Preview/Designzeug_Janick_Entrop_Industriedesign.png"
+                alt="Projekt_Designzeug"
+              />
+              <div class="overlay">NUR ZEUG - DESIGNZEUG</div>
+            </a>
+          </div>
+          <div class="project-item" draggable="true">
+            <a href="KETTE_S.html">
+              <img
+                class="fade-image scale-small"
+                id="KETTE_S-img"
+                src="img/Projekte_Preview/Kette_S_Janick_Entrop_Industriedesign.png"
+                alt="KETTE_S"
+              />
+              <div class="overlay">KETTE_S</div>
+            </a>
+          </div>
+          <div class="project-item" draggable="true">
+            <a href="project5.html">
+              <img
+                class="fade-image"
+                src="img/Projekte_Preview/DDZ_BOX_Janick_Entrop_Industriedesign.png"
+                alt="Projekt "
+              />
+              <div class="overlay">DDZ</div>
+            </a>
+          </div>
+          <div class="project-item" draggable="true">
+            <a href="project5.html">
+              <img
+                class="fade-image"
+                src="img/Projekte_Preview/BOX04_Janick_Entrop_Industriedesign.png"
+                alt="Projekt 5"
+              />
+              <div class="overlay">BOX04</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="about-content">
+          <img
+            class="about-image fade-image"
+            src="img/About/Potrait_ret_Janick_Entrop_Industriedesign_Figma.gif"
+            alt="Team Bild"
+          />
+          <div class="about-text slide-in-from-right">
+            <h2>about</h2>
+            <p>
+              Hey, my name is Janick. I’m a trained carpenter, and during my apprenticeship (2016–2019), I discovered my passion for design and creativity. Along with honing my craft, I developed a strong sense of shapes, colors, and materials. I’ve always been drawn to tackling challenges creatively and coming up with unique, sometimes unconventional, solutions—this has inspired me to place creativity at the heart of my work. After my apprenticeship and time as a journeyman, I decided to deepen my skills by completing further training as a "Designer in Craftsmanship" (2021–2022). There, I learned how to develop concepts independently and make design-driven decisions. Working with various materials and tools has always fueled my inspiration. In the winter semester of 2023–2024, I began studying Industrial Design at Munich University of Applied Sciences.
+            </p>
+            <h2>motivation</h2>
+            <p>
+              For me, design is about solving problems and improving the world. It’s about understanding needs and translating them into aesthetics and functionality. Good design balances form and function, innovation, and sustainability, with people at the core. I believe design is essential in creating a more sustainable future and positively impacting our environment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          <a href="mailto:Janick.entrop@gmail.com">Janick.entrop@gmail.com</a>
+        </p>
+        <p><a href="tel:+491759826492">+49 175 9826492</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Copyright 2024 <a href="impressum.html">Janick Entrop</a></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/janick-entrop" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/janick.entrop" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const heroContent = document.querySelector(".hero-content");
+        const scrollIndicator = document.querySelector(".scroll-indicator");
+        const scrollPos = window.scrollY;
+
+        heroContent.style.opacity = 1 - scrollPos / 600;
+        scrollIndicator.style.opacity = 1 - scrollPos / 600;
+      });
+
+      const projectItems = document.querySelectorAll(".project-item");
+      projectItems.forEach((item) => {
+        item.addEventListener("dragstart", () => {
+          item.classList.add("dragging");
+        });
+
+        item.addEventListener("dragend", () => {
+          item.classList.remove("dragging");
+        });
+
+        item.addEventListener("dragover", (e) => {
+          e.preventDefault();
+          const draggingItem = document.querySelector(".dragging");
+          const siblings = [...projectItems];
+          const nextElement = getDragAfterElement(e.clientY, siblings);
+          if (nextElement == null) {
+            item.parentNode.appendChild(draggingItem);
+          } else {
+            item.parentNode.insertBefore(draggingItem, nextElement);
+          }
+        });
+      });
+
+      function getDragAfterElement(y, siblings) {
+        return siblings.reduce(
+          (closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
+            if (offset < 0 && offset > closest.offset) {
+              return { offset: offset, element: child };
+            } else {
+              return closest;
+            }
+          },
+          { offset: Number.NEGATIVE_INFINITY }
+        ).element;
+      }
+      // JavaScript
+      window.addEventListener("scroll", function () {
+        // Scroll-Animation für die Hero-Section
+        const heroContent = document.querySelector(".hero-content");
+        const scrollIndicator = document.querySelector(".scroll-indicator");
+        const scrollPos = window.scrollY;
+
+        heroContent.style.opacity = 1 - scrllPos / 600;
+        scrollIndicator.style.opacity = 1 - scrollPos / 600;
+
+        // Fade-Out-Animation für die Projektbilder
+        const fadeImages = document.querySelectorAll(".fade-image");
+        const windowHeight = window.innerHeight; // Höhe des Fensters
+
+        fadeImages.forEach((image) => {
+          const imageTop = image.getBoundingClientRect().top; // Position des Bildes relativ zum Viewport
+
+          if (imageTop < windowHeight) {
+            image.classList.remove("fade-out"); // Klasse entfernen, wenn das Bild im Sichtfeld ist
+          } else {
+            image.classList.add("fade-out"); // Klasse hinzufügen, wenn das Bild außerhalb des Sichtfeldes ist
+          }
+        });
+      });
+
+      // Intersection Observer für die Projektbilder
+      document.addEventListener("DOMContentLoaded", function () {
+        const fadeImages = document.querySelectorAll(".fade-image");
+
+        const options = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.6, // 50% des Bildes müssen sichtbar sein
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            console.log(
+              `Element: ${entry.target}, isIntersecting: ${entry.isIntersecting}`
+            ); // Debugging
+            if (entry.isIntersecting) {
+              entry.target.classList.remove("fade-out"); // Bild wird sichtbar
+            } else {
+              entry.target.classList.add("fade-out"); // Bild wird unsichtbar
+            }
+          });
+        }, options);
+
+        fadeImages.forEach((image) => {
+          observer.observe(image); // Jedes Bild wird beobachtet
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const aboutText = document.querySelector(".about-text");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Wenn der Text sichtbar ist, füge die aktive Klasse hinzu
+                aboutText.classList.add("slide-in-active");
+                aboutText.classList.remove("slide-out-to-left"); // Stelle sicher, dass die ausblendende Klasse entfernt wird
+              } else {
+                // Wenn der Text nicht mehr sichtbar ist, füge die ausblendende Klasse hinzu
+                aboutText.classList.remove("slide-in-active");
+                aboutText.classList.add("slide-out-to-left");
+              }
+            });
+          },
+          {
+            threshold: 0.5, // 10% Sichtbarkeit
+          }
+        );
+
+        observer.observe(aboutText); // Das about-text Element überwachen
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+    const svg = document.querySelector("svg");
+    svg.classList.add("active"); // Fügt die Klasse automatisch nach dem Laden hinzu
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const svg = document.querySelector("svg");
+    const path = svg.querySelector(".cls-1");
+
+    // Funktion, um die Animation zu starten
+    const startAnimation = () => {
+        path.style.animation = 'none';  // Animation zurücksetzen
+        path.offsetHeight;  // Force Reflow (damit die Animation neu gestartet wird)
+        path.style.animation = 'draw 2s ease forwards, fill 1s 1s forwards'; // Animation neu starten
+    };
+
+    // Funktion, um die Animation zurückzusetzen, wenn das SVG nicht mehr sichtbar ist
+    const resetAnimation = () => {
+        path.style.animation = 'none'; // Setze die Animation zurück
+    };
+
+    // Intersection Observer-Optionen
+    const options = {
+        root: null, // Viewport als Root
+        rootMargin: '0px',
+        threshold: 0.1, // 10% des SVGs müssen sichtbar sein
+    };
+
+    // Erstellen des IntersectionObservers
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Wenn das SVG wieder sichtbar ist, starte die Animation
+                startAnimation();
+            } else {
+                // Wenn das SVG den Viewport verlässt, setze die Animation zurück
+                resetAnimation();
+            }
+        });
+    }, options);
+
+    // Beginne, das SVG zu beobachten
+    observer.observe(svg);
+    
+    // Initiale Animation beim Laden der Seite
+    startAnimation();
+});
+      
+    </script>
+  </body>
+</html>

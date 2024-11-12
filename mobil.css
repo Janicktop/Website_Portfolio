@@ -1,0 +1,309 @@
+/* Grundlegende globale Stile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+
+/* Hover-Bereich für Header */
+.hover-area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    z-index: 1001;
+}
+
+.hover-area:hover + header,
+header:hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Header */
+header {
+    position: fixed;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    pointer-events: none;
+}
+
+/* Logo und Navigation */
+.logo {
+    margin-bottom: 50px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.2);
+    font-size: 1.8em;
+    color: rgb(254, 122, 40);
+}
+
+/* Hero-Sektion */
+#hero {
+    height: 90vh; /* Höhe beibehalten */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 100%; /* Breite auf 100% setzen */
+}
+
+.hero-content img {
+    width: 100%; /* Bildbreite auf 100% setzen */
+    height: auto; /* Höhe automatisch anpassen */
+    max-height: 100%; /* Maximale Höhe beibehalten */
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.fade-image {
+    transition: opacity 0.9s ease-in-out;
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Projekt-Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 80px 20px;
+    width: 100%;
+}
+
+.project-item {
+    background-color: #8d8d8d00;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(254, 122, 40);
+}
+
+/* About-Sektion */
+#about {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about-image {
+    width: 25%;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+.about-text {
+    width: 40%;
+    text-align: left;
+    opacity: 0; /* Startet als unsichtbar */
+    animation: slideInFromRight 1s forwards; /* Fügt Animation hinzu */
+}
+
+/* Keyframes für Slide-in Animation */
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes für Slide-out Animation */
+@keyframes slideOutToRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Projekte in eine Spalte */
+        padding: 20px;
+    }
+
+    header {
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 80px;
+        align-items: center;
+    }
+
+    /* Hero für Mobilgeräte */
+    #hero {
+        flex-direction: column;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    /* About-Sektion für Mobil */
+    #about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+        border-radius: 0px;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: left;
+        opacity: 1; /* Sichtbar in der Mobilansicht */
+        animation: slideInFromRight 1s forwards; /* Animation beibehalten */
+    }
+
+    .about-text.hidden {
+        animation: slideOutToRight 1s forwards; /* Slide-out Animation */
+        opacity: 0; /* Opazität auf 0 setzen */
+    }
+}
+
+/* Media Query für mobile Geräte */
+@media only screen and (max-width: 768px) {
+    /* Verkürze die Dauer der Animation auf mobilen Geräten */
+    .cls-1 {
+        animation: draw 2s ease forwards, fill 1s 2s forwards; /* Kürzere Animationen */
+    }
+
+    /* Optional: Skalierung der SVG-Größe für kleinere Bildschirme */
+    svg {
+        width: 100%; /* Reduziert die Größe auf mobilen Geräten */
+        height: auto;
+    }
+
+    /* Optional: Verändere das Stroke-Design für mobile Geräte */
+    .cls-1 {
+        stroke-width: 2; /* Dünnerer Strich auf mobilen Geräten */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        padding: 40px 10px;
+        padding-left: 0;
+    }
+}
