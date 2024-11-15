@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minimalistische Landing Page</title>
+    <title>Website_Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -215,7 +215,6 @@
       }
       // JavaScript
       window.addEventListener("scroll", function () {
-        // Scroll-Animation für die Hero-Section
         const heroContent = document.querySelector(".hero-content");
         const scrollIndicator = document.querySelector(".scroll-indicator");
         const scrollPos = window.scrollY;
@@ -223,46 +222,46 @@
         heroContent.style.opacity = 1 - scrllPos / 600;
         scrollIndicator.style.opacity = 1 - scrollPos / 600;
 
-        // Fade-Out-Animation für die Projektbilder
+        // Fade-Out-Animation
         const fadeImages = document.querySelectorAll(".fade-image");
-        const windowHeight = window.innerHeight; // Höhe des Fensters
+        const windowHeight = window.innerHeight; 
 
         fadeImages.forEach((image) => {
-          const imageTop = image.getBoundingClientRect().top; // Position des Bildes relativ zum Viewport
+          const imageTop = image.getBoundingClientRect().top; 
 
           if (imageTop < windowHeight) {
-            image.classList.remove("fade-out"); // Klasse entfernen, wenn das Bild im Sichtfeld ist
+            image.classList.remove("fade-out");
           } else {
-            image.classList.add("fade-out"); // Klasse hinzufügen, wenn das Bild außerhalb des Sichtfeldes ist
+            image.classList.add("fade-out"); 
           }
         });
       });
 
-      // Intersection Observer für die Projektbilder
+      // Intersection Observer f
       document.addEventListener("DOMContentLoaded", function () {
         const fadeImages = document.querySelectorAll(".fade-image");
 
         const options = {
           root: null,
           rootMargin: "0px",
-          threshold: 0.6, // 50% des Bildes müssen sichtbar sein
+          threshold: 0.6, 
         };
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             console.log(
               `Element: ${entry.target}, isIntersecting: ${entry.isIntersecting}`
-            ); // Debugging
+            ); 
             if (entry.isIntersecting) {
-              entry.target.classList.remove("fade-out"); // Bild wird sichtbar
+              entry.target.classList.remove("fade-out"); 
             } else {
-              entry.target.classList.add("fade-out"); // Bild wird unsichtbar
+              entry.target.classList.add("fade-out"); 
             }
           });
         }, options);
 
         fadeImages.forEach((image) => {
-          observer.observe(image); // Jedes Bild wird beobachtet
+          observer.observe(image); 
         });
       });
       document.addEventListener("DOMContentLoaded", function () {
@@ -272,68 +271,60 @@
           (entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                // Wenn der Text sichtbar ist, füge die aktive Klasse hinzu
                 aboutText.classList.add("slide-in-active");
-                aboutText.classList.remove("slide-out-to-left"); // Stelle sicher, dass die ausblendende Klasse entfernt wird
+                aboutText.classList.remove("slide-out-to-left");
               } else {
-                // Wenn der Text nicht mehr sichtbar ist, füge die ausblendende Klasse hinzu
                 aboutText.classList.remove("slide-in-active");
                 aboutText.classList.add("slide-out-to-left");
               }
             });
           },
           {
-            threshold: 0.5, // 10% Sichtbarkeit
+            threshold: 0.5,
           }
         );
 
-        observer.observe(aboutText); // Das about-text Element überwachen
+        observer.observe(aboutText);
       });
       document.addEventListener("DOMContentLoaded", () => {
     const svg = document.querySelector("svg");
-    svg.classList.add("active"); // Fügt die Klasse automatisch nach dem Laden hinzu
+    svg.classList.add("active"); 
 });
 
 document.addEventListener("DOMContentLoaded", () => {
     const svg = document.querySelector("svg");
     const path = svg.querySelector(".cls-1");
 
-    // Funktion, um die Animation zu starten
+    
     const startAnimation = () => {
-        path.style.animation = 'none';  // Animation zurücksetzen
-        path.offsetHeight;  // Force Reflow (damit die Animation neu gestartet wird)
-        path.style.animation = 'draw 2s ease forwards, fill 1s 1s forwards'; // Animation neu starten
+        path.style.animation = 'none'; 
+        path.offsetHeight;  
+        path.style.animation = 'draw 2s ease forwards, fill 1s 1s forwards';
     };
 
-    // Funktion, um die Animation zurückzusetzen, wenn das SVG nicht mehr sichtbar ist
     const resetAnimation = () => {
-        path.style.animation = 'none'; // Setze die Animation zurück
+        path.style.animation = 'none'; 
     };
 
-    // Intersection Observer-Optionen
+    
     const options = {
-        root: null, // Viewport als Root
+        root: null, 
         rootMargin: '0px',
-        threshold: 0.1, // 10% des SVGs müssen sichtbar sein
+        threshold: 0.1, // sichtbarkeit SVG
     };
 
-    // Erstellen des IntersectionObservers
+  
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                // Wenn das SVG wieder sichtbar ist, starte die Animation
                 startAnimation();
             } else {
-                // Wenn das SVG den Viewport verlässt, setze die Animation zurück
                 resetAnimation();
             }
         });
     }, options);
 
-    // Beginne, das SVG zu beobachten
     observer.observe(svg);
-    
-    // Initiale Animation beim Laden der Seite
     startAnimation();
 });
       
