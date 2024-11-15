@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalistische Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Projekt_ISU</title>
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
+    <link rel="stylesheet" href="CSS/mobil.css" media="(max-width: 768px)" />
     <style>
         body {
             font-family: 'Helvetica', sans-serif;
@@ -347,9 +348,9 @@
             toggle.addEventListener('click', function() {
                 var content = this.nextElementSibling;
                 if (content.style.display === "none" || content.style.display === "") {
-                    content.style.display = "block"; // Textblock einblenden
+                    content.style.display = "block"; 
                 } else {
-                    content.style.display = "none"; // Textblock ausblenden
+                    content.style.display = "none"; 
                 }
             });
         });
