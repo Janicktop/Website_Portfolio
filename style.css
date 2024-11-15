@@ -98,7 +98,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/* SVG-Stile für das animierte Logo */
+/* SVG-Stile für Logo */
 @keyframes draw {
     0% {
       stroke-dasharray: 0, 900;
@@ -113,7 +113,7 @@ nav ul li a:hover {
       fill: transparent;
     }
     100% {
-      fill: #000; /* Hier deine gewünschte Farbe */
+      fill: #000; 
     }
   }
   
@@ -121,7 +121,7 @@ nav ul li a:hover {
     fill: transparent;
     stroke: black;
     stroke-width: 2;
-    stroke-dasharray: 1000, 0; /* Diese Definition sorgt für den "Zeichen"-Effekt */
+    stroke-dasharray: 1000, 0;
     animation: draw 1s ease forwards, fill 1s 1s forwards;
   }
   
